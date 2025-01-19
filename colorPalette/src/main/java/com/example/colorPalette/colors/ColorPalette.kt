@@ -15,16 +15,17 @@ private val green_700 = Color(0xFF4CAF50) // Dark green
 private val green_800 = Color(0xFF43A047) // Darker green
 private val green_900 = Color(0xFF2E7D32) // Deep green
 
-private val brown_50 = Color(0xFFFBE9E7)  // Light peach
-private val brown_100 = Color(0xFFFFCCBC) // Very light warm brown
-private val brown_200 = Color(0xFFFFAB91) // Soft warm beige
-private val brown_300 = Color(0xFFFF8A65) // Light medium warm brown
-private val brown_400 = Color(0xFFFF7043) // Medium warm brown
-private val brown_500 = Color(0xFFFF5722) // Rich warm brown
-private val brown_600 = Color(0xFFF4511E) // Dark warm brown
-private val brown_700 = Color(0xFFE64A19) // Darker warm brown
-private val brown_800 = Color(0xFFD84315) // Deep warm brown
-private val brown_900 = Color(0xFFBF360C) // Deepest warm brown
+// Browns
+private val brown_50 = Color(0xFFF4EDE4)  // Light cream
+private val brown_100 = Color(0xFFEBDCCF) // Very light brown
+private val brown_200 = Color(0xFFD2B8A6) // Soft beige
+private val brown_300 = Color(0xFFB8947D) // Light medium brown
+private val brown_400 = Color(0xFFA77B63) // Medium brown
+private val brown_500 = Color(0xFF9C6243) // Reference brown
+private val brown_600 = Color(0xFF8B563B) // Dark brown
+private val brown_700 = Color(0xFF7A4B33) // Darker brown
+private val brown_800 = Color(0xFF69402B) // Deep brown
+private val brown_900 = Color(0xFF583523) // Deepest brown
 
 // Whites/Grays/Black
 private val total_white = Color(0xFFFFFFFF)     // Pure white
@@ -39,6 +40,18 @@ private val gray_700 = Color(0xFF616161)  // Dark gray
 private val gray_800 = Color(0xFF424242)  // Darker gray
 private val gray_900 = Color(0xFF212121)  // Deep gray
 private val total_black = Color(0xFF000000)     // Pure black
+
+// Warning Colors
+private val warning_50 = Color(0xFFFBE9E7)  // Lightest warning
+private val warning_100 = Color(0xFFFFCCBC) // Very light warning
+private val warning_200 = Color(0xFFFFAB91) // Soft warning
+private val warning_300 = Color(0xFFFF8A65) // Light medium warning
+private val warning_400 = Color(0xFFFF7043) // Medium warning
+private val warning_500 = Color(0xFFFF5722) // Rich warning
+private val warning_600 = Color(0xFFF4511E) // Dark warning
+private val warning_700 = Color(0xFFE64A19) // Darker warning
+private val warning_800 = Color(0xFFD84315) // Deep warning
+private val warning_900 = Color(0xFF9C3806) // Deepest warning (reference)
 
 data class ColorPaletteProvider(
     val primary50: Color = brown_50,
@@ -62,6 +75,17 @@ data class ColorPaletteProvider(
     val accent700: Color = green_700,
     val accent800: Color = green_800,
     val accent900: Color = green_900,
+
+    val warning50: Color = warning_50,
+    val warning100: Color = warning_100,
+    val warning200: Color = warning_200,
+    val warning300: Color = warning_300,
+    val warning400: Color = warning_400,
+    val warning500: Color = warning_500,
+    val warning600: Color = warning_600,
+    val warning700: Color = warning_700,
+    val warning800: Color = warning_800,
+    val warning900: Color = warning_900,
 
     val white: Color = total_white,
     val gray50: Color = gray_50,

@@ -1,6 +1,7 @@
 import java.util.Properties
 
 val githubProperties = Properties()
+val colorPaletteLibraryVersion: String by project
 file("github.properties").inputStream().use { githubProperties.load(it) }
 
 plugins {
@@ -15,7 +16,7 @@ android {
 
     defaultConfig {
         minSdk = 24
-        version = "1.0.2"
+        version = colorPaletteLibraryVersion
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -45,7 +46,7 @@ afterEvaluate {
 
                 groupId = "com.example"
                 artifactId = "colorpalette"
-                version = "1.0.2"
+                version = colorPaletteLibraryVersion
             }
         }
 

@@ -1,5 +1,6 @@
 package com.example.fontresources.fonts
 
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -150,4 +151,8 @@ class FontResourcesProvider(
             )
         }
     }
+}
+
+val LocalFontProvider = staticCompositionLocalOf<FontResourcesProvider> {
+    error("No Typography provided")
 }

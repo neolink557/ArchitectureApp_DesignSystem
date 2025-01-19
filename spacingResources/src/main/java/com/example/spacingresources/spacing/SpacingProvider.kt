@@ -1,6 +1,8 @@
 package com.example.spacingresources.spacing
 
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.dp
+import java.nio.file.WatchEvent.Modifier
 
 object SpacingProvider {
     // Very small increments
@@ -39,4 +41,12 @@ object SpacingProvider {
     val enormous = 112.dp
     val monumental = 128.dp
     val titanic = 144.dp
+}
+
+val LocalSpacingProvider = staticCompositionLocalOf<SpacingProvider> {
+    error("No Spacing provided")
+}
+
+val LocalModifierProvider = staticCompositionLocalOf<Modifier> {
+    error("No modifier provided")
 }

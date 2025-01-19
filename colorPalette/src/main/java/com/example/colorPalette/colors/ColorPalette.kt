@@ -1,5 +1,6 @@
 package com.example.colorPalette.colors
 
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
 // Greens
@@ -27,7 +28,7 @@ private val brown_800 = Color(0xFF5D4037) // Deep brown
 private val brown_900 = Color(0xFF4E342E) // Deepest brown
 
 // Whites/Grays/Black
-private val white = Color(0xFFFFFFFF)     // Pure white
+private val total_white = Color(0xFFFFFFFF)     // Pure white
 private val gray_50 = Color(0xFFFAFAFA)   // Very light gray
 private val gray_100 = Color(0xFFF5F5F5)  // Light gray
 private val gray_200 = Color(0xFFEEEEEE)  // Light gray
@@ -38,41 +39,45 @@ private val gray_600 = Color(0xFF757575)  // Dark gray
 private val gray_700 = Color(0xFF616161)  // Dark gray
 private val gray_800 = Color(0xFF424242)  // Darker gray
 private val gray_900 = Color(0xFF212121)  // Deep gray
-private val black = Color(0xFF000000)     // Pure black
+private val total_black = Color(0xFF000000)     // Pure black
 
 data class ColorPaletteProvider(
-    val primary50: Color = Color(0xFFF5F2E7),
-    val primary100: Color = Color(0xFFEDE7E0),
-    val primary200: Color = Color(0xFFD7CCC8),
-    val primary300: Color = Color(0xFFBCAAA4),
-    val primary400: Color = Color(0xFFA1887F),
-    val primary500: Color = Color(0xFF8D6E63),
-    val primary600: Color = Color(0xFF795548),
-    val primary700: Color = Color(0xFF6D4C41),
-    val primary800: Color = Color(0xFF5D4037),
-    val primary900: Color = Color(0xFF4E342E),
+    val primary50: Color = brown_50,
+    val primary100: Color = brown_100,
+    val primary200: Color = brown_200,
+    val primary300: Color = brown_300,
+    val primary400: Color = brown_400,
+    val primary500: Color = brown_500,
+    val primary600: Color = brown_600,
+    val primary700: Color = brown_700,
+    val primary800: Color = brown_800,
+    val primary900: Color = brown_900,
 
-    val accent50: Color = Color(0xFFEAF4E1),
-    val accent100: Color = Color(0xFFDCEFD4),
-    val accent200: Color = Color(0xFFC5E1A5),
-    val accent300: Color = Color(0xFFAED581),
-    val accent400: Color = Color(0xFF9CCC65),
-    val accent500: Color = Color(0xFF81C784),
-    val accent600: Color = Color(0xFF66BB6A),
-    val accent700: Color = Color(0xFF4CAF50),
-    val accent800: Color = Color(0xFF43A047),
-    val accent900: Color = Color(0xFF2E7D32),
+    val accent50: Color = green_50,
+    val accent100: Color = green_100,
+    val accent200: Color = green_200,
+    val accent300: Color = green_300,
+    val accent400: Color = green_400,
+    val accent500: Color = green_500,
+    val accent600: Color = green_600,
+    val accent700: Color = green_700,
+    val accent800: Color = green_800,
+    val accent900: Color = green_900,
 
-    val white: Color = Color(0xFFFFFFFF),
-    val gray50: Color = Color(0xFFFAFAFA),
-    val gray100: Color = Color(0xFFF5F5F5),
-    val gray200: Color = Color(0xFFEEEEEE),
-    val gray300: Color = Color(0xFFE0E0E0),
-    val gray400: Color = Color(0xFFBDBDBD),
-    val gray500: Color = Color(0xFF9E9E9E),
-    val gray600: Color = Color(0xFF757575),
-    val gray700: Color = Color(0xFF616161),
-    val gray800: Color = Color(0xFF424242),
-    val gray900: Color = Color(0xFF212121),
-    val black: Color = Color(0xFF000000)
+    val white: Color = total_white,
+    val gray50: Color = gray_50,
+    val gray100: Color = gray_100,
+    val gray200: Color = gray_200,
+    val gray300: Color = gray_300,
+    val gray400: Color = gray_400,
+    val gray500: Color = gray_500,
+    val gray600: Color = gray_600,
+    val gray700: Color = gray_700,
+    val gray800: Color = gray_800,
+    val gray900: Color = gray_900,
+    val black: Color = total_black
 )
+
+val LocalColorProvider = staticCompositionLocalOf<ColorPaletteProvider> {
+    error("No Color provided")
+}

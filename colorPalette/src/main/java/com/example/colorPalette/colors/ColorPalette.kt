@@ -15,17 +15,16 @@ private val green_700 = Color(0xFF4CAF50) // Dark green
 private val green_800 = Color(0xFF43A047) // Darker green
 private val green_900 = Color(0xFF2E7D32) // Deep green
 
-// Browns
-private val brown_50 = Color(0xFFF5F2E7)  // Light cream
-private val brown_100 = Color(0xFFEDE7E0) // Very light brown
-private val brown_200 = Color(0xFFD7CCC8) // Soft beige
-private val brown_300 = Color(0xFFBCAAA4) // Light medium brown
-private val brown_400 = Color(0xFFA1887F) // Medium brown
-private val brown_500 = Color(0xFF8D6E63) // Rich brown
-private val brown_600 = Color(0xFF795548) // Dark brown
-private val brown_700 = Color(0xFF6D4C41) // Darker brown
-private val brown_800 = Color(0xFF5D4037) // Deep brown
-private val brown_900 = Color(0xFF4E342E) // Deepest brown
+private val brown_50 = Color(0xFFFBE9E7)  // Light peach
+private val brown_100 = Color(0xFFFFCCBC) // Very light warm brown
+private val brown_200 = Color(0xFFFFAB91) // Soft warm beige
+private val brown_300 = Color(0xFFFF8A65) // Light medium warm brown
+private val brown_400 = Color(0xFFFF7043) // Medium warm brown
+private val brown_500 = Color(0xFFFF5722) // Rich warm brown
+private val brown_600 = Color(0xFFF4511E) // Dark warm brown
+private val brown_700 = Color(0xFFE64A19) // Darker warm brown
+private val brown_800 = Color(0xFFD84315) // Deep warm brown
+private val brown_900 = Color(0xFFBF360C) // Deepest warm brown
 
 // Whites/Grays/Black
 private val total_white = Color(0xFFFFFFFF)     // Pure white

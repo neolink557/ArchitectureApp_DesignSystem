@@ -52,7 +52,7 @@ afterEvaluate {
 
                 groupId = "com.example"
                 artifactId = "colorpalette"
-                version = colorPaletteLibraryVersion
+                version = project.version.toString() // Use the dynamically set version
             }
         }
 
@@ -75,9 +75,9 @@ tasks.register("publishExperimental") {
     description = "Publishes the experimental version of the library with a hash."
 
     doFirst {
-        // Append a hash to the version for experimental publishing
+        // Append -SNAPSHOT and a hash to the version for experimental publishing
         val hash = generateHash()
-        project.version = "$colorPaletteLibraryVersion-$hash"
+        project.version = "$colorPaletteLibraryVersion-SNAPSHOT-$hash"
         println("Publishing experimental version: ${project.version}")
     }
 

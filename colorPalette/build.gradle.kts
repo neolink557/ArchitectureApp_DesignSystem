@@ -81,7 +81,7 @@ tasks.register("publishExperimental") {
         println("Publishing experimental version: ${project.version}")
     }
 
-    dependsOn("publish")
+    finalizedBy("publishGprPublicationToGitHubPackagesRepository")
 }
 
 // Default publish task

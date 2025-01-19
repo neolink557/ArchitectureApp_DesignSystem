@@ -70,7 +70,7 @@ afterEvaluate {
 }
 
 // Custom task to publish experimental version
-tasks.register("publishExperimental") {
+val publishExperimental by tasks.registering {
     group = "publishing"
     description = "Publishes the experimental version of the library with a hash."
 
@@ -80,8 +80,11 @@ tasks.register("publishExperimental") {
         project.version = "$colorPaletteLibraryVersion-SNAPSHOT-$hash"
         println("Publishing experimental version: ${project.version}")
     }
+}
 
-    dependsOn("publishGprPublicationToGitHubPackagesRepository")
+// Ensure publishExperimental runs before all publishing tasks
+tasks.withType<PublishToMavenRepository>().configureEach {
+    mustRunAfter(publishExperimental)
 }
 
 // Default publish task

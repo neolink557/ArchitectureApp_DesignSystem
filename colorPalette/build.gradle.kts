@@ -87,11 +87,6 @@ val publishExperimental by tasks.registering {
     }
 }
 
-// Ensure publishExperimental runs before all publishing tasks
-tasks.withType<PublishToMavenRepository>().configureEach {
-    mustRunAfter(publishExperimental)
-}
-
 // Default publish task
 tasks.named("publish") {
     doFirst {

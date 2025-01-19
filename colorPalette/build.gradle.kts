@@ -3,6 +3,10 @@ import java.util.UUID
 
 val githubProperties = Properties()
 val colorPaletteLibraryVersion: String by project
+val incrementVersion: (String) -> String = { version ->
+    val (major, minor, patch) = version.split('.')
+    "${major}.${minor}.${patch.toInt() + 1}"
+}
 file("github.properties").inputStream().use { githubProperties.load(it) }
 
 plugins {
@@ -66,31 +70,6 @@ afterEvaluate {
                 }
             }
         }
-    }
-}
-
-// Custom task to publish experimental version
-val publishExperimental by tasks.registering {
-    group = "publishing"
-    description = "Publishes the experimental version of the library with a hash."
-
-    doFirst {
-        // Append -SNAPSHOT and a hash to the version for experimental publishing
-        val hash = generateHash()
-        project.version = "$colorPaletteLibraryVersion-SNAPSHOT-$hash"
-        println("Publishing experimental version: ${project.version}")
-    }
-
-    // Ensure this task runs before any publishing tasks
-    tasks.withType<PublishToMavenRepository>().configureEach {
-        mustRunAfter(this@registering)
-    }
-}
-
-// Default publish task
-tasks.named("publish") {
-    doFirst {
-        println("Publishing stable version: $colorPaletteLibraryVersion")
     }
 }
 

@@ -80,6 +80,11 @@ val publishExperimental by tasks.registering {
         project.version = "$colorPaletteLibraryVersion-SNAPSHOT-$hash"
         println("Publishing experimental version: ${project.version}")
     }
+
+    // Ensure this task runs before any publishing tasks
+    tasks.withType<PublishToMavenRepository>().configureEach {
+        mustRunAfter(this@registering)
+    }
 }
 
 // Ensure publishExperimental runs before all publishing tasks

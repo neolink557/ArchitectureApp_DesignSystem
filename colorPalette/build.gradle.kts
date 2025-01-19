@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         minSdk = 24
-        version = "1.0.1"
+        version = "1.0.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -45,7 +45,7 @@ afterEvaluate {
 
                 groupId = "com.example"
                 artifactId = "colorpalette"
-                version = "1.0.1"
+                version = "1.0.2"
             }
         }
 

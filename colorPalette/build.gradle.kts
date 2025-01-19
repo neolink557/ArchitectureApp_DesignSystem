@@ -1,4 +1,5 @@
 import java.util.Properties
+import java.util.UUID
 
 val githubProperties = Properties()
 val colorPaletteLibraryVersion: String by project
@@ -38,6 +39,11 @@ android {
     }
 }
 
+// Function to generate a random hash
+fun generateHash(): String {
+    return UUID.randomUUID().toString().replace("-", "")
+}
+
 afterEvaluate {
     publishing {
         publications {
@@ -63,19 +69,29 @@ afterEvaluate {
     }
 }
 
-publishing {
-    repositories {
-        maven {
-            val releasesRepoUrl = layout.buildDirectory.dir("repos/releases")
-            val snapshotsRepoUrl = layout.buildDirectory.dir("repos/snapshots")
-            url = uri(if (project.hasProperty("release")) releasesRepoUrl else snapshotsRepoUrl)
-        }
+// Custom task to publish experimental version
+tasks.register("publishExperimental") {
+    group = "publishing"
+    description = "Publishes the experimental version of the library with a hash."
+
+    doFirst {
+        // Append a hash to the version for experimental publishing
+        val hash = generateHash()
+        project.version = "$colorPaletteLibraryVersion-$hash"
+        println("Publishing experimental version: ${project.version}")
+    }
+
+    dependsOn("publish")
+}
+
+// Default publish task
+tasks.named("publish") {
+    doFirst {
+        println("Publishing stable version: $colorPaletteLibraryVersion")
     }
 }
 
-
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

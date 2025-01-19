@@ -4,28 +4,28 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
 // Greens
-private val green_50 = Color(0xFFEAF4E1)  // Light green
-private val green_100 = Color(0xFFDCEFD4) // Very light green
-private val green_200 = Color(0xFFC5E1A5) // Soft green
-private val green_300 = Color(0xFFAED581) // Light medium green
-private val green_400 = Color(0xFF9CCC65) // Medium green
-private val green_500 = Color(0xFF81C784) // Medium green
-private val green_600 = Color(0xFF66BB6A) // Rich green
-private val green_700 = Color(0xFF4CAF50) // Dark green
-private val green_800 = Color(0xFF43A047) // Darker green
-private val green_900 = Color(0xFF2E7D32) // Deep green
+private val green_50 = Color(0xFFE9EDC9)  // Lightest green
+private val green_100 = Color(0xFFDDE4B8) // Very light green
+private val green_200 = Color(0xFFD1DBA7) // Soft green
+private val green_300 = Color(0xFFC5D296) // Light medium green
+private val green_400 = Color(0xFFB9C985) // Medium green
+private val green_500 = Color(0xFFADC074) // Rich green
+private val green_600 = Color(0xFFA1B763) // Dark green
+private val green_700 = Color(0xFF95AE52) // Darker green
+private val green_800 = Color(0xFF89A541) // Deep green
+private val green_900 = Color(0xFF7D9C30) // Deepest green
 
 // Browns
-private val brown_50 = Color(0xFFF4EDE4)  // Light cream
-private val brown_100 = Color(0xFFEBDCCF) // Very light brown
-private val brown_200 = Color(0xFFD2B8A6) // Soft beige
-private val brown_300 = Color(0xFFB8947D) // Light medium brown
-private val brown_400 = Color(0xFFA77B63) // Medium brown
-private val brown_500 = Color(0xFF9C6243) // Reference brown
-private val brown_600 = Color(0xFF8B563B) // Dark brown
-private val brown_700 = Color(0xFF7A4B33) // Darker brown
-private val brown_800 = Color(0xFF69402B) // Deep brown
-private val brown_900 = Color(0xFF583523) // Deepest brown
+private val brown_50 = Color(0xFFFEFAE0)  // Lightest brown
+private val brown_100 = Color(0xFFFDF5D1) // Very light brown
+private val brown_200 = Color(0xFFFCF0C2) // Soft beige
+private val brown_300 = Color(0xFFFBEAB3) // Light medium brown
+private val brown_400 = Color(0xFFF9E5A4) // Medium brown
+private val brown_500 = Color(0xFFF8E095) // Rich brown
+private val brown_600 = Color(0xFFF7DB86) // Dark brown
+private val brown_700 = Color(0xFFF6D677) // Darker brown
+private val brown_800 = Color(0xFFF5D168) // Deep brown
+private val brown_900 = Color(0xFFD4A373) // Deepest brown (reference)
 
 // Whites/Grays/Black
 private val total_white = Color(0xFFFFFFFF)     // Pure white

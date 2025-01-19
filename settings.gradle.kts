@@ -20,5 +20,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "ArchitectureApp_DesignSystem"
-include(":app")
- 
+include(":TestApp")
+include(":colorPalette")
+include(":fontResources")
+include(":spacingResources")

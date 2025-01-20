@@ -3,10 +3,6 @@ import java.util.UUID
 
 val githubProperties = Properties()
 val colorPaletteLibraryVersion: String by project
-val incrementVersion: (String) -> String = { version ->
-    val (major, minor, patch) = version.split('.')
-    "${major}.${minor}.${patch.toInt() + 1}"
-}
 file("github.properties").inputStream().use { githubProperties.load(it) }
 
 plugins {
